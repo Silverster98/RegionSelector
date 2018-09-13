@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Region Selector</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<fieldset>
+		<legend>下拉选择框实现省市区三级联动</legend>
+		
+		您选择的是： <input type="text" id="address">
+		<br/>
+
+		<select id="province" onchange="loadCity(this)">
+			<option>=请选择省份=</option>
+		</select>
+
+		<select id="city" onchange="loadCounty(this)">
+			<option>=请选择城市=</option>
+		</select>
+
+		<select id="county" onchange="selectedCounty(this)">
+			<option>=请选择县区=</option>
+		</select>
+
+		<button type="button" class="btn" onclick="showRegion()">确定</button>
+	</fieldset>
+
+<script type="text/javascript" src="regioninfor.js"></script>
+<script type="text/javascript" src="method1.js"></script>
+
+</body>
+</html>
